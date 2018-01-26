@@ -5,6 +5,10 @@
 import java.util.*;
 
 public class BestTimeToBuyAndSellStock {
+	/**
+	 * Main method
+	 * @param args
+	 */
 	public static void main(String[] args){
 		List<Integer> prices = new LinkedList<Integer>();
 		prices.add(9);
@@ -15,6 +19,11 @@ public class BestTimeToBuyAndSellStock {
 		System.out.println("profit= "+maxProfit(prices));
 	}
 	
+	/**
+	 * Calculate Max Profit
+	 * @param prices
+	 * @return
+	 */
 	public static int maxProfit(List<Integer> prices) {
         if(prices.size()==0)
             return 0;
