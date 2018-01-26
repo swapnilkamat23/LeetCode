@@ -4,11 +4,17 @@
 
 public class MaximumSubarray {
 	
+	/**
+	 * Compute maximum sum of subarray
+	 * @param nums
+	 * @return
+	 */
 	public static int maxSubArray(int[] nums) {
         if(nums.length == 0){
             return 0;
         }
         int prev = 0;
+        // dynamic array to store max sum of subarray upto the current index 
         int[] sum = new int[nums.length];
         int result = Integer.MIN_VALUE;
         for(int i = 0; i<nums.length; i++){
@@ -26,6 +32,10 @@ public class MaximumSubarray {
         return result;
     }
 	
+	/**
+	 * main method
+	 * @param args
+	 */
 	public static void main(String args[]){
 		int[] nums = new int[]{-2,1,-3,4,-1,2,1,-5,4};
 		System.out.println("Max sum = " + maxSubArray(nums));
