@@ -1,6 +1,15 @@
+/**
+ * Author: Swapnil Kamat
+ */
 
 public class SearchRotatedSortedArray {
 
+	/**
+	 * call the search algorithm
+	 * @param nums
+	 * @param target
+	 * @return
+	 */
 	public int search(int[] nums, int target) {
         if(nums.length==0){
             return -1;
@@ -9,6 +18,14 @@ public class SearchRotatedSortedArray {
         return result;
     }
     
+	/**
+	 * binary search for the target
+	 * @param nums
+	 * @param start
+	 * @param end
+	 * @param target
+	 * @return
+	 */
     public int binarySearch(int[] nums, int start, int end, int target){
         if(start==end){
             if(target == nums[start])
@@ -38,6 +55,11 @@ public class SearchRotatedSortedArray {
         return -1;
     }
     
+    
+    /**
+     * main method
+     * @param args
+     */
     public static void main(String[] args){
     	SearchRotatedSortedArray obj = new SearchRotatedSortedArray();
     	int[] nums = new int[]{4, 5, 6, 7, 0, 1, 2};
