@@ -20,7 +20,7 @@ public class BestTimeToBuyAndSellStock {
 	}
 	
 	/**
-	 * Calculate Max Profit
+	 * Calculate Max Profit for the stock
 	 * @param prices
 	 * @return
 	 */
