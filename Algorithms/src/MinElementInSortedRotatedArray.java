@@ -1,3 +1,6 @@
+/**
+ * Author: Swapnil Kamat
+ */
 
 public class MinElementInSortedRotatedArray {
 
