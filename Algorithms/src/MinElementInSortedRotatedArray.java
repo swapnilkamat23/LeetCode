@@ -5,7 +5,10 @@ public class MinElementInSortedRotatedArray {
 		if(arr.length == 1)
 			return arr[0];
 		else{
-			return binarySearch(arr, 0, arr.length-1);
+			if(arr[0]<arr[arr.length-1])
+				return arr[0];
+			else
+				return binarySearch(arr, 0, arr.length-1);
 		}
 	}
 	
@@ -13,15 +16,24 @@ public class MinElementInSortedRotatedArray {
 		if(start == end){
 			return arr[start];
 		}
-		else if(start <= end){
-			
+		else if(start < end){
+			int mid = (start + end)/2;
+			if(arr[mid+1] < arr[mid]){
+				return arr[mid+1];
+			}
+			else if(arr[mid] < arr[end] && mid-1>=0){
+				return binarySearch(arr, start, mid-1);
+			}
+			else{
+				return binarySearch(arr, mid+1, end);
+			}
 		}
 		return -1;
 	}
 	
 	public static void main(String args[]){
 		MinElementInSortedRotatedArray obj = new MinElementInSortedRotatedArray();
-		int[] arr = new int[]{7,8,1,2,3,4,5,6};
+		int[] arr = new int[]{7,8,2,3,4,5,6};
 		System.out.println("Minimum element = " + obj.minElement(arr));
 	}
 	
