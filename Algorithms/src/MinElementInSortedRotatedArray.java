@@ -4,6 +4,11 @@
 
 public class MinElementInSortedRotatedArray {
 
+	/**
+	 * Find the minimum element
+	 * @param arr
+	 * @return
+	 */
 	public int minElement(int[] arr){
 		if(arr.length == 1)
 			return arr[0];
@@ -15,6 +20,13 @@ public class MinElementInSortedRotatedArray {
 		}
 	}
 	
+	/**
+	 * Use binary search algorithm for O(logn) complexity
+	 * @param arr
+	 * @param start
+	 * @param end
+	 * @return
+	 */
 	public int binarySearch(int[] arr, int start, int end){
 		if(start == end){
 			return arr[start];
