@@ -46,6 +46,10 @@ public class MinElementInSortedRotatedArray {
 		return -1;
 	}
 	
+	/**
+	 * Main Method
+	 * @param args
+	 */
 	public static void main(String args[]){
 		MinElementInSortedRotatedArray obj = new MinElementInSortedRotatedArray();
 		int[] arr = new int[]{7,8,2,3,4,5,6};
