@@ -1,6 +1,7 @@
 /**
  * Author: Swapnil Kamat
  */
+
 public class NumberOfIslands {
 	/**
 	 * Traverse the grid to count number of islands.
